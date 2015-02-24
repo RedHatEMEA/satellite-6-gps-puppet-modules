@@ -1,9 +1,6 @@
 class ntp (
   $iburst_enable = true,
-  $server1       = '0.centos.pool.ntp.org',
-  $server2       = '1.centos.pool.ntp.org',
-  $server3       = '2.centos.pool.ntp.org',
-  $server4       = '3.centos.pool.ntp.org',
+  $ntpServers    = ["1.pool.ntp.org", "2.pool.ntp.org"],
 ) {
 
   service { 'ntpd':
