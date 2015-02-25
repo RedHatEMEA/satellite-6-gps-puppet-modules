@@ -5,14 +5,20 @@
 # === Parameters
 #
 # [*enabled*]
-#  String. Defines service status at boottime
-#  Valid options: true, false, manual
+#  Boolean. Defines service status at boottime
+#  Valid options: true, false
 #  Default: true
 #
 # [*policy*]
 #  String. Defines the default policy to apply to unmatched traffic
 #  Valid options: accept, reject, drop
 #  Default: accept
+#
+# [*log*]
+#  Boolean. Defines if unmatched traffic should be sent to log before 
+#           applying default policy
+#  Valid options: true, false
+#  Default: false
 #
 # [*role*]
 #  Array. Defines all included roles in the server. These must exist as classes.
@@ -39,7 +45,7 @@
 # Copyright 2014 Red Hat.
 #
 class iptables (
-	$enabled = false,
+	$enabled = true,
 	$policy	 = 'accept',
 	$log 	 = false,
 	$role 	 = [],
