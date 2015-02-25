@@ -30,13 +30,17 @@ class ntp ( $ntpServers = '127.0.0.1' ) {
     path    => '/etc/ntp.conf',
 #    source  => 'puppet:///modules/ntp/ntp.conf',
     content => template('ntp/ntp.erb'),
+    require => Package['ntp'],
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
+    notify  => Service['ntpd'],
   }
 
   service { 'ntpd':
-    ensure => 'running',
-    enable => true,
+    ensure     => 'running',
+    enable     => true,
+    hasstatus  => true,
+    hasrestart => true,
   }
 }
