@@ -1,0 +1,24 @@
+{
+  "name": "sat6-ntp",
+  "version": "0.1.1",
+  "source": "UNKNOWN",
+  "author": "sat6",
+  "license": "Apache License, Version 2.0",
+  "summary": "Simple ntp module file for Satellite 6",
+  "description": "Simple ntp module file for Satellite 6",
+  "project_page": "UNKNOWN",
+  "dependencies": [
+
+  ],
+  "types": [
+
+  ],
+  "checksums": {
+    "Modulefile": "bec329e84f5dd6447798cfc1cefc0350",
+    "README": "2291f549cbf5b762f6ee7002b1293c47",
+    "manifests/init.pp": "41e573a6af1ba99442bc10bd975df5bd",
+    "spec/spec_helper.rb": "a55d1e6483344f8ec6963fcb2c220372",
+    "templates/ntp.erb": "c5e7c19ff53838f66ec61bb29c8bf06b",
+    "tests/init.pp": "6c8e71361bfa267266a8e9d168072af7"
+  }
+}
