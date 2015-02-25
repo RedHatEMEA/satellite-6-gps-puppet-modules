@@ -1,0 +1,11 @@
+name    'sat6-ntp'
+version '0.1.1'
+source 'UNKNOWN'
+author 'sat6'
+license 'Apache License, Version 2.0'
+summary 'Simple ntp module file for Satellite 6'
+description 'Simple ntp module file for Satellite 6'
+project_page 'UNKNOWN'
+
+## Add dependencies, if any:
+# dependency 'username/name', '>= 1.2.0'
