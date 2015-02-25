@@ -19,7 +19,10 @@
 #
 # Copyright 2015 Your name here, unless otherwise noted.
 #
-class ntp ( $ntpServers = '127.0.0.1' ) {
+class ntp ( 
+  $ntpServers = '127.0.0.1' ,
+  $iburst_enable = true,
+  ) {
 
   package { 'ntp':
   ensure => installed,
