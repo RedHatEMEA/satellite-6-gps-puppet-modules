@@ -5,4 +5,6 @@ The goal of this project is to create a set of puppet modules that we, as consul
 ## Genreral Guidlines
 Please create a branch to keep your own modules in and create pull-requests. Also, please make sure to run puppet-lint on all content (ideally as a pre-commit hook)
 
+Please start all modules with sat6-    So for example sat6-ntp
+
 Dont worry about creating the most technically perfect module before uploading
