@@ -61,15 +61,21 @@ class iptables (
       before  => Class['iptables::post'],
     }
 
-    # Load pre/post rules
-    class { ['iptables::pre', 'iptables::post']: }
+    # Load pre rules
+    class { 'iptables::pre': }
 
     # Load all required roles
-    class { $role: }
+    class { $role: 
+      before => Class['iptables::post']
+    }
+
+    # Load post rules
+    class { 'iptables::post': }
   }
 
   # Ensure service status
   class { 'firewall':
-    ensure => $enabled? { true => running, default => stopped },
+    ensure  => $enabled? { true => running, default => stopped },
+    require => Class['iptables::post']
   }
 }
