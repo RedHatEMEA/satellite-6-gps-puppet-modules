@@ -25,7 +25,7 @@ restrict -6 ::1
 #server 3.rhel.pool.ntp.org iburst
 
 <% [@ntpServers].flatten.each do |server| -%>
-	server <%= server %><% if @iburst_enable == true -%> iburst<% end %>
+server <%= server %><% if @iburst_enable == true -%> iburst<% end %>
 <% end -%>
 
 #broadcast 192.168.1.255 autokey	# broadcast server
