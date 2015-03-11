@@ -4,14 +4,14 @@
 
   ],
   "source": "UNKNOWN",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "checksums": {
-    "manifests/init.pp": "b8038dc926d53c9d90bdf91953c812cb",
-    "README": "2291f549cbf5b762f6ee7002b1293c47",
+    "templates/ntp.erb": "34d25f3b56b9ee74ab23e3f457d7fef4",
     "tests/init.pp": "6c8e71361bfa267266a8e9d168072af7",
-    "templates/ntp.erb": "74a4172a7e2a8d987a8f4c65fbcc13a5",
+    "Modulefile": "faa9dfb606f939d2a16614ee07316f97",
+    "manifests/init.pp": "8111444f74592ab44a0ca647c6c033b8",
     "spec/spec_helper.rb": "a55d1e6483344f8ec6963fcb2c220372",
-    "Modulefile": "ec5d6ce32f3e36b7fe78b82e2a7a3add"
+    "README": "2291f549cbf5b762f6ee7002b1293c47"
   },
   "types": [
 

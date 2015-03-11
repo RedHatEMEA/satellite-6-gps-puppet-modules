@@ -1,41 +1,28 @@
 # == Class: ntp
 #
-# Full description of class ntp here.
+# Simple ntp class that is free standing, ie doesn't use stdlib
 #
 # === Parameters
 #
 # Document parameters here.
 #
-# [*sample_parameter*]
-#   Explanation of what this parameter affects and what it defaults to.
-#   e.g. "Specify one or more upstream ntp servers as an array."
-#
-# === Variables
-#
-# Here you should define a list of variables that this module would require.
-#
-# [*sample_variable*]
-#   Explanation of how this variable affects the funtion of this class and if
-#   it has a default. e.g. "The parameter enc_ntp_servers must be set by the
-#   External Node Classifier as a comma separated list of hostnames." (Note,
-#   global variables should be avoided in favor of class parameters as
-#   of Puppet 2.6.)
-#
-# === Examples
-#
-#  class { ntp:
-#    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
-#  }
+# [*ntpServers*]
+#   Takes a comma separated list if servers/names
+#   
+#   Default: 127.0.0.1
 #
 # === Authors
 #
-# Author Name <author@domain.com>
+# Author Name <ghares@redhat.com>
 #
 # === Copyright
 #
 # Copyright 2015 Your name here, unless otherwise noted.
 #
-class ntp ( $ntpServers = '127.0.0.1' ) {
+class ntp ( 
+  $ntpServers = '127.0.0.1' ,
+  $iburst_enable = true,
+  ) {
 
   package { 'ntp':
   ensure => installed,
@@ -46,13 +33,17 @@ class ntp ( $ntpServers = '127.0.0.1' ) {
     path    => '/etc/ntp.conf',
 #    source  => 'puppet:///modules/ntp/ntp.conf',
     content => template('ntp/ntp.erb'),
+    require => Package['ntp'],
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
+    notify  => Service['ntpd'],
   }
 
   service { 'ntpd':
-    ensure => 'running',
-    enable => true,
+    ensure     => 'running',
+    enable     => true,
+    hasstatus  => true,
+    hasrestart => true,
   }
 }
