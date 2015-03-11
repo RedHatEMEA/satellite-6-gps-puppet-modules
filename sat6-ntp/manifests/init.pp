@@ -20,7 +20,7 @@
 # Copyright 2015 Your name here, unless otherwise noted.
 #
 class ntp (
-  $ntpServers = '0.rhel.pool.ntp.org,1.rhel.pool.ntp.org,2.rhel.pool.ntp.org' ,
+  $ntpServers = '[ '0.rhel.pool.ntp.org', '1.rhel.pool.ntp.org', '2.rhel.pool.ntp.org' ]',
   $iburst_enable = true,
   ) {
 
