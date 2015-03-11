@@ -1,0 +1,24 @@
+{
+  "license": "Apache License, Version 2.0",
+  "dependencies": [
+
+  ],
+  "source": "UNKNOWN",
+  "version": "0.2.1",
+  "checksums": {
+    "spec/spec_helper.rb": "a55d1e6483344f8ec6963fcb2c220372",
+    "templates/ntp.erb": "15809fb83ce54b5ef15978b97e26d1ee",
+    "tests/init.pp": "6c8e71361bfa267266a8e9d168072af7",
+    "Modulefile": "43674ffc3ae29c92d91b366f546cab6a",
+    "manifests/init.pp": "f0afe67239788d8eb5d73c3c77c74177",
+    "README": "2291f549cbf5b762f6ee7002b1293c47"
+  },
+  "types": [
+
+  ],
+  "description": "Simple ntp module file for Satellite 6 that doesnt use stdlib",
+  "project_page": "UNKNOWN",
+  "summary": "Simple ntp module file for Satellite 6",
+  "author": "sat6",
+  "name": "sat6-ntp"
+}
