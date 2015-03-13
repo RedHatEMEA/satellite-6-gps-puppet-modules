@@ -1,0 +1,14 @@
+{
+  "name": "sat6-cisl1rhel6",
+  "version": "0.1.10",
+  "author": "sat6",
+  "summary": "RHEL 6 CIS Level 1",
+  "license": "Apache 2.0",
+  "source": "",
+  "description": "RHEL 6 CIS Level 1",
+  "issues_url": null,
+  "project_page": null,
+  "dependencies": [
+    {"name":"puppetlabs-stdlib"}
+  ]
+}
