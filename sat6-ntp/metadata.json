@@ -1,0 +1,14 @@
+{
+  "name": "sat6-ntp",
+  "version": "0.2.3",
+  "author": "Graham Hares and Adrian Bradshaw",
+  "summary": "Simple NTP module for Satellite 6",
+  "license": "GPL-3.0",
+  "source": "https://github.com/RedHatEMEA/satellite-6-gps-puppet-modules/tree/master/sat6-ntp",
+  "project_page": "https://github.com/RedHatEMEA/satellite-6-gps-puppet-modules/",
+  "issues_url": "https://github.com/RedHatEMEA/satellite-6-gps-puppet-modules/tree/master/sat6-ntp/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
