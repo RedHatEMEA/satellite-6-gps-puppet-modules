@@ -1,6 +1,6 @@
 {
   "name": "sat6-cisl1rhel6",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "author": "sat6",
   "summary": "RHEL 6 CIS Level 1",
   "license": "Apache 2.0",

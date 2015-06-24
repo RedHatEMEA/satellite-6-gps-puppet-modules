@@ -130,7 +130,7 @@ class cisl1rhel6::params (
   $cis_9_1_8_enabled      = true,
   $cis_9_1_9_enabled      = true,
   $cis_md5_grub_password  = '$1$LtwV7$STi40hx/AZvfMbI9sfjZY/',
-  $cis_ntp_servers        = '127.0.0.1'
+  $cis_ntp_servers        = ['127.0.0.1',]
 
 ) {
 
@@ -253,6 +253,6 @@ class cisl1rhel6::params (
   validate_bool($cis_9_1_8_enabled)
   validate_bool($cis_9_1_9_enabled)
   validate_string($cis_md5_grub_password)
-  validate_string($cis_ntp_servers)
+  validate_array($cis_ntp_servers)
 
 }
