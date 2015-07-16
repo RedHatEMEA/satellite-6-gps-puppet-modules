@@ -1,0 +1,9 @@
+{
+  "Modulefile": "7a31a7553487c8d977b2cb7d987b39d7",
+  "README": "2291f549cbf5b762f6ee7002b1293c47",
+  "manifests/init.pp": "97d739bc2eafad20432bed52c11a8f45",
+  "metadata.json": "435ee2adc24b5b00b4a7da050cad9271",
+  "spec/spec_helper.rb": "a55d1e6483344f8ec6963fcb2c220372",
+  "templates/ntp.erb": "15809fb83ce54b5ef15978b97e26d1ee",
+  "tests/init.pp": "6c8e71361bfa267266a8e9d168072af7"
+}
